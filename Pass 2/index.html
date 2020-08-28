@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+        <title>Crypto</title>
+        <style>
+            html,body {
+            height: 100%;
+            margin: 0;
+            background-color: #1d2330;
+            }
+        </style>
+      </head>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4">CryptoApp</h1>
+            
+            <hr class="my-4">
+            <p>Professional app to get the latest cryptocurrency rates.</p>
+            
+            <input class="w-25 form-control form-control-lg mb-2" type="text" value='BTC' id="textInputCurrency"></input>
+            <button class="btn btn-primary btn-lg" id="getButton" onclick="onClick()">GET EXCHANGE RATES</button>
+            
+        </div>
+
+
+        <section class="container">
+            <table class="table" id="ratesTable" style="color: #fff;">
+                <thead>
+                    <tr>
+                      <th scope="col">Asset</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ratesTableBody"></tbody>
+            </table>
+        </section>
+        
+        <script src="index.js" async defer></script>
+    </body>
+</html>

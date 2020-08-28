@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">            
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1 class="display-4">CryptoApp</h1>
+            <p>Professional app to get the latest cryptocurrency rates.</p>
+            <input class="w-25 form-control form-control-lg mb-2" type="text" value='BTC' id="assetInput"></input>
+            <button class="btn btn-primary btn-lg"  onClick="onClick()">GET RATES</button>
+        </div>
+
+        <section class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Asset</td>
+                        <td>Rate</td>
+                        <td>Time</td>
+                    </tr>                
+                </thead>
+                <tbody id="assetTable">
+                </tbody>
+            </table>
+        </section>
+
+
+        
+        <script src="index.js"></script>
+
+
+    </body>
+</html>
