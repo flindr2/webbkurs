@@ -12,7 +12,7 @@ async function createUser(req, res) {
 
   res.json({
     user,
-    message: "create user successfully"
+    message: "User created successfully"
   });
 }
 
@@ -33,7 +33,7 @@ async function login(req, res) {
     res.json({
       user,
       token,
-      message: "create user successfully"
+      message: "Successfully logged in."
     });
   } else {
     res.status(401).json({
