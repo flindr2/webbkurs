@@ -8,6 +8,7 @@ const db = admin.firestore();
 const app = express();
 app.use(cors({ origin: ['http://localhost:5000', 'https://crypto-api-90478.web.app'] }));
 
+// Get single user
 app.get("/:id", async (request, response) => {
   const userCollectionRef = db.collection("users");
   const result = await userCollectionRef.doc(request.params.id).get();
@@ -18,6 +19,7 @@ app.get("/:id", async (request, response) => {
   response.status(200).send({ id, ...user });
 });
 
+// Get all users
 app.get("/", async (request, response) => {
   const userCollectionRef = db.collection("users");
   const result = await userCollectionRef.get();
@@ -32,6 +34,7 @@ app.get("/", async (request, response) => {
   response.status(200).send(users);
 });
 
+// Update user
 app.put("/:id", async (request, response) => {
   const userCollectionRef = db.collection("users");
   const result = await userCollectionRef
@@ -41,14 +44,17 @@ app.put("/:id", async (request, response) => {
   response.status(200).send(result);
 });
 
+// Create user
 app.post("/", async (request, response) => {
   const newUser = JSON.parse(request.body);
+  //TODO Skicka bad request om newUser inte går att parsa ut.
   const userCollectionRef = db.collection("users");
   const result = await userCollectionRef.add(newUser);
-
-  response.status(200).send(result);
+  
+  response.status(200).send(result.id);
 });
 
+// Delete user
 app.delete("/:id", async (request, response) => {
   const userId = request.params.id;
   const userCollectionRef = db.collection("users");

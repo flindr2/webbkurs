@@ -1,4 +1,6 @@
+// url to my local API (if I run it with 'firebase serve')
 // const url = 'http://localhost:5001/crypto-api-90478/us-central1/users/';
+// url to my API in the firebase cloud
 const url = 'https://us-central1-crypto-api-90478.cloudfunctions.net/users/';
 
 let users = [];
